@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.oumarleytisapplication.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".appcomponents.di.MyApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApp"
+        android:usesCleartextTraffic="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        tools:targetApi="s">
+        <activity
+            android:name=".ArticlesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".modules.addarticleform.ui.AddArticleFormActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".modules.articledetails.ui.ArticleDetailsActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".modules.home.ui.HomeActivity"
+            android:screenOrientation="fullSensor" />
+        <activity android:name=".ArticlesActivity"
+            tools:ignore="DuplicateActivity" />
+    </application>
+
+</manifest>

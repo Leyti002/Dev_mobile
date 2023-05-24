@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="articleDetailsVM" type="com.oumarleytisapplication.app.modules.articledetails.data.viewmodel.ArticleDetailsVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStackarticlecounter"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_20pxh"
+        android:layout_marginStart="@dimen/_20pxh"
+        android:layout_marginTop="@dimen/_49pxv" android:layout_width="match_parent">
+        <LinearLayout android:id="@+id/linearColumnarticlecounter"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_200">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearArticledetails"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylegray_200">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtArticleCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{articleDetailsVM.articleDetailsModel.txtArticleCounter}"
+                    style="@style/txtInterbold40" tools:text="@string/lbl_article_1"/>
+                <LinearLayout android:id="@+id/linearRowecritparjohn"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEcritparJohn"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{articleDetailsVM.articleDetailsModel.txtEcritparJohn}"
+                        style="@style/txtInterregular12" tools:text="@string/msg_ecrit_par_john"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txt21Novembre202"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginStart="@dimen/_138pxh"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{articleDetailsVM.articleDetailsModel.txt21Novembre202}"
+                        style="@style/txtInterregular12" tools:text="@string/msg_21_novembre_202"/>
+                </LinearLayout>
+                <View android:background="@color/black_900"
+                    android:id="@+id/lineLineOne"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginTop="@dimen/_1pxv" android:layout_width="@dimen/_353pxh"/>
+                <TextView android:id="@+id/txtDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="match_parent"
+                    android:text="@{articleDetailsVM.articleDetailsModel.txtDescription}"
+                    style="@style/txtInterregular12" tools:text="@string/msg_what_is_lorem_i"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:backgroundTint="@color/gray_900"
+            android:id="@+id/floatingBtnFloatingactionbutton"
+            android:layout_gravity="bottom|end"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_21pxv"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_width="wrap_content"
+            app:fabCustomSize="@dimen/_60pxh"
+            app:srcCompat="@drawable/img_reply" app:tint="@color/white_A700"/>
+    </FrameLayout>
+</layout>

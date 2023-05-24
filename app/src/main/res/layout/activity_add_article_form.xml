@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addArticleFormVM" type="com.oumarleytisapplication.app.modules.addarticleform.data.viewmodel.AddArticleFormVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStacksimpleblog"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:backgroundTint="@color/gray_900"
+            android:id="@+id/floatingBtnFloatingactionbutton"
+            android:layout_gravity="bottom|end"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_18pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="wrap_content"
+            app:fabCustomSize="@dimen/_60pxh"
+            app:srcCompat="@drawable/img_close" app:tint="@color/white_A700"
+            android:contentDescription="@string/todo" />
+        <LinearLayout android:id="@+id/linearAddArticleFor"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_200">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtSimpleBlog"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_53pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{addArticleFormVM.addArticleFormModel.txtSimpleBlog}"
+                style="@style/txtInterbold40" tools:text="@string/lbl_simpleblog"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtAjouterunarti"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_43pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{addArticleFormVM.addArticleFormModel.txtAjouterunarti}"
+                style="@style/txtInterbold24" tools:text="@string/msg_ajouter_un_arti"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtGroupTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingStart="@dimen/_12pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@{addArticleFormVM.addArticleFormModel.txtGroupTwo}"
+                style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_titre"
+                tools:ignore="RtlSymmetry" />
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumncontenu"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtContenu"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_308pxv"
+                    android:layout_marginEnd="@dimen/_109pxh"
+                    android:layout_marginStart="@dimen/_109pxh"
+                    android:layout_marginTop="@dimen/_20pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{addArticleFormVM.addArticleFormModel.txtContenu}"
+                    style="@style/txtInterbold24_1" tools:text="@string/lbl_contenu"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnAjouter"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_137pxv"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_ajouter"
+                android:textAllCaps="false"
+                style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_ajouter"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
